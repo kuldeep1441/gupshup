@@ -28,7 +28,7 @@ const SideBar = ({ user, onlineUsers, roomData, setRoomData, setAllMsg }) => {
       receiver: user,
     });
     axios
-      .get(`http://localhost:5000/message/${user._id}`)
+      .get(`http://localhost:9090/message/${user._id}`)
       .then((res) => {
         console.log(res);
         setAllMsg(res.data.data);

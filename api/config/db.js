@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const PATH = "mongodb://localhost:27017/chatAPI";
+const PATH = "mongodb://localhost:27017/gupshup";
 
 const connectMongoDB = async () => {
   try {

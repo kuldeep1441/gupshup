@@ -15,7 +15,7 @@ const server = http.createServer(app);
 
 connectMongoDB()
   .then(() => {
-    server.listen(5000, () => {
+    server.listen(9090, () => {
       socket(server);
       console.log("server working");
     });

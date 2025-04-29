@@ -26,7 +26,7 @@ const socketInit = (server) => {
   });
 
   io.on("connection", (socket) => {
-    console.log(socket.id);
+    console.log('socketId', socket.id);
     socket.on("ADD_USER", (user) => {
       addUser(user, socket.id);
       io.emit("USER_ADDED", onlineUsers);

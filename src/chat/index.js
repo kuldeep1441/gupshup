@@ -6,7 +6,7 @@ import Profile from "./profile";
 import { useLocation, useNavigate } from "react-router-dom";
 import io from "socket.io-client";
 import axios from "axios";
-const PATH = "http://localhost:5000";
+const PATH = "http://localhost:9090";
 const Chat = () => {
   const socketRef = useRef();
   const [isConnected, setIsConnected] = useState(false);
@@ -61,7 +61,7 @@ const Chat = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:5000/message/${id}`)
+      .delete(`http://localhost:9090/message/${id}`)
       .then((res) => {
         if (socketRef.current.connected) {
           const data = {
